@@ -37,6 +37,9 @@ dependencies {
 
 	// Json
 	implementation 'org.json:json:20240303';
+
+	// pdf convert to String
+	implementation 'org.apache.pdfbox:pdfbox:2.0.31' // 최신 버전 확인 후 변경
 }
 
 tasks.named('test') {
