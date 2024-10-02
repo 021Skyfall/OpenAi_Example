@@ -55,3 +55,42 @@ assistant = client.beta.assistants.create(
   model="gpt-4o",
 )
  */
+
+/* 오픈 ai 어시스턴트에게 벡터 스토어에 담긴 파일을 읽게할 수 있는 파이썬 코드
+from openai import OpenAI
+client = OpenAI(api_key="")
+
+assistant = client.beta.assistants.create(
+    name="asst_T4PnWVpKJoPXocMPWtDbrboy",
+    instructions="",
+    tools=[{"type": "file_search"}],
+    tool_resources={
+       "file_search": {
+          "vector_store_ids": ["vs_GEukEMvlvpbvZEYMGgNaEIZc"] # vector_store_ids 설정 / 나의 정보를 기입한 txt 파일
+       }
+    },
+    model="gpt-3.5-turbo"
+)
+
+thread = client.beta.threads.create()
+
+message = client.beta.threads.messages.create(
+  thread_id=thread.id,
+  role="user",
+  content="선유준의 나이는 몇 살일까"
+)
+
+run = client.beta.threads.runs.create_and_poll(
+  thread_id=thread.id,
+  assistant_id=assistant.id,
+)
+
+if run.status == 'completed':
+  messages = client.beta.threads.messages.list(
+    thread_id=thread.id
+  )
+  print(messages)
+  # value 추출
+else:
+  print(run.status)
+ */
