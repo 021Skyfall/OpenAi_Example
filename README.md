@@ -67,7 +67,7 @@ ChatFunction 을 사용해서 특정 이름의 어시스턴트와 통신이 가�
 
 즉, 파이썬으로는 가능함     
 
-다시 자바로 해당 파이썬 코드와 동일한 동작을 하는 방법을 구글링을 통해 찾아보았고 오픈소스 중 sashirestela의 simple-openai 를 찾음     
+다시 자바로 해당 파이썬 코드와 동일한 동작을 하는 방법을 구글링을 통해 찾아보았고 오픈소스 중 [sashirestela의 simple-openai](https://github.com/sashirestela/simple-openai) 를 찾음     
 
 이 오픈 소스는 최근 3주 전까지 업데이트 되었으며 현재도 업뎃이 진행 중임       
 또한 vector store를 다루는 함수도 존재하기 때문에 다음에는 이걸 가지고 어시스턴트와 통신해볼 예정임     
