@@ -30,10 +30,13 @@ dependencies {
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 
-	// Open Ai Lib
+	// TheoKanning openai-java
 	implementation 'com.theokanning.openai-gpt3-java:service:0.18.2'
 	implementation 'com.theokanning.openai-gpt3-java:api:0.18.2'
 	implementation 'com.theokanning.openai-gpt3-java:client:0.18.2'
+
+	// sashirestela simple-openai
+	implementation 'io.github.sashirestela:simple-openai:3.8.2'
 
 	// Json
 	implementation 'org.json:json:20240303';
